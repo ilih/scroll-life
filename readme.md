@@ -1,10 +1,25 @@
 readme!!! The JS library which can create chain animations
+## Demo page
+[scroll-life](http://www.scroll-life.artygeek.net/)
+
 ## How to use
-### Install
+### Installation
+* NPM
 ```
 npm install scroll-life --save
 ```
-##### Add lib to your code. Default initialization
+* HTML
+```html
+<div id="sll-init">
+  <div data-sll-start="1" data-sll-life="5">
+    <div data-sll-start="0" data-sll-life="1">...</div>
+    <div data-sll-start="1" data-sll-life="2">...</div>
+    <div data-sll-start="3">...</div>
+  </div>
+</div>
+```
+* JavaScript
+##### Default initialization
 ```javascript
 let ScrollLife = require('scroll-life');
 
