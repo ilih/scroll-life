@@ -1,11 +1,17 @@
 readme!!! The JS library which can create chain animations
 ## How to use
-#### Default initialization
+### Install
+```
+npm install scroll-life --save
+```
+##### Add lib to your code. Default initialization
 ```javascript
+let ScrollLife = require('scroll-life');
+
 new ScrollLife();
 ```
 
-#### Custom initialization
+##### Custom initialization
 ```javascript
 new ScrollLife({
  initClass: 'sll-init',
