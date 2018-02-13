@@ -1,0 +1,20 @@
+doctype html
+html
+  include partials/head
+
+  body
+    include partials/header
+
+    main
+      div.scenes#sll-init
+        include partials/scroll_click
+        include scenes/scene_1
+        include scenes/scene_2
+        div.sll-btn
+          div.sll-btn-up up
+          div.sll-btn-down down
+
+    include partials/footer
+
+    script(src="./main.js")
+

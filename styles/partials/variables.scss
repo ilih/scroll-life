@@ -1,0 +1,23 @@
+//@media
+$mobile-port: 320px;
+$mobile-land: 480px;
+$tablet-port: 768px;
+$tablet-land: 1024px;
+$tablet-max: 1280px;
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+@mixin transition($x) {
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -o-transition: $x;
+  transition: $x;
+}
+
+
+
