@@ -281,8 +281,8 @@ var ScrollLife = function () {
 
 // Initialize main core ------------------
 
+// new ScrollLife();
 
-new ScrollLife();
 // new ScrollLife({
 //   initClass: 'sll-init',
 //   enableClass: 'sll-enable',

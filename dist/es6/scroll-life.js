@@ -213,7 +213,9 @@ class ScrollLife {
 }
 
 // Initialize main core ------------------
-new ScrollLife();
+
+// new ScrollLife();
+
 // new ScrollLife({
 //   initClass: 'sll-init',
 //   enableClass: 'sll-enable',
