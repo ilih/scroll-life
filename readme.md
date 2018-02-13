@@ -37,3 +37,23 @@ new ScrollLife({
  btnHoverTimeout: 1000
 });
 ```
+* CSS
+```scss
+.animated-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: red;
+  
+  //added on data-sll-start = main counter
+  &.sll-enable {
+    left: 100px;
+  }
+  //added on data-sll-start + data-sll-life = main counter
+  &.sll-disable {
+    left: 200px;
+  }
+}
+```
