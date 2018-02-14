@@ -21,9 +21,8 @@ npm install scroll-life --save
 * JavaScript
 ##### Default initialization
 ```javascript
-let ScrollLife = require('scroll-life');
-
-new ScrollLife();
+var ScrollLife = require('scroll-life');
+var init = new ScrollLife();
 ```
 
 ##### Custom initialization

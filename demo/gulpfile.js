@@ -4,17 +4,21 @@ var gulp       = require('gulp'),
     uglifycss  = require('gulp-uglifycss'),
     rename     = require('gulp-rename'),
     uglify     = require('gulp-uglify'),
+    browserify = require('browserify'),
+    source     = require('vinyl-source-stream'),
+    buffer     = require('vinyl-buffer'),
     pug        = require('gulp-pug'),
     babel      = require('gulp-babel');
 
 
 var prod = true;
 
-gulp.task('default', ['sass', 'es6', 'views', 'watch']);
+gulp.task('default', ['sass', 'es6', 'scripts', 'views', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./styles/**/*.scss', ['sass']);
   gulp.watch('./pug/**/*', ['views']);
+  gulp.watch('./js/**/*.js', ['scripts']);
   gulp.watch('../dist/es6/**/*.js', ['es6']);
 });
 
@@ -35,6 +39,15 @@ gulp.task('es6', function() {
       presets: ['env']
     }))
     .pipe(gulp.dest('../dist/es5/'))
+});
+
+gulp.task('scripts', function() {
+  return browserify('./js/app.js')
+    .bundle()
+    .pipe(source('main.js'))
+    .pipe(buffer())
+    .pipe(gulpIf(prod, uglify()))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('views', function buildHTML() {
