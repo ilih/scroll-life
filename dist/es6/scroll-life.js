@@ -1,3 +1,5 @@
+// (function() {
+//   ScrollLife = function() {
 let eCounterUp   = new Event('counterUp');
 let eCounterDown = new Event('counterDown');
 let firstStep    = 0;
@@ -144,7 +146,7 @@ class ButtonsNav {
   }
 }
 
-class ScrollLife {
+export class ScrollLife {
   constructor(
     initClass       = 'sll-init',
     enableClass     = 'sll-enable',
@@ -211,6 +213,10 @@ class ScrollLife {
     }
   }
 }
+
+//   module.exports.ScrollLife = ScrollLife;
+// })()
+
 
 // Initialize main core ------------------
 
